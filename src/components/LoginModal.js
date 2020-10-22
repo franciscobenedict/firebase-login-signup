@@ -134,7 +134,7 @@ const LoginModal = () => {
 
           <hr />
 
-          <Link to="" className="white_text" onClick={switchToForgotPasswordView}>Forgot password?</Link>
+          <Link to="" className="" onClick={switchToForgotPasswordView}>Forgot password?</Link>
 
           <hr />
 
@@ -174,7 +174,9 @@ const LoginModal = () => {
             Request Password change
           </button>
 
-          <div><Link to="" className="white_text" onClick={switchToLoginView}>Return to login modal</Link></div>
+          <hr />
+
+          <div><Link to="" className="" onClick={switchToLoginView}>Return to login modal</Link></div>
           {error && <p className="error">{error}</p>}
         </form>
       }

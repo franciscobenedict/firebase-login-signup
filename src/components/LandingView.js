@@ -17,6 +17,7 @@ const LandingView = () => {
 
   return (
     <Layout title={pageTitle} description="This is the Firebase authentication Login app">
+      <div className="opaque_bg">
         <h1>{pageTitle}</h1>
         <p>Login with Email or Google.</p>
         <p>{ currentUser ? <>You are logged in</> : <>You are not logged in.</> }</p>
@@ -37,6 +38,7 @@ const LandingView = () => {
             <li>html5</li>
           </ul>
         }
+      </div>
     </Layout>
   )
 }

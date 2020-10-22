@@ -13,8 +13,10 @@ const HomeView = () => {
 
   return (
     <Layout title={pageTitle} description="This is the Firebase authentication Login app">
+      <div className="opaque_bg">
         <h1>{pageTitle}</h1>
         <p>You are now logged in.</p>
+      </div>
     </Layout>
   )
 }

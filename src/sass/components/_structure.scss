@@ -33,12 +33,20 @@ html {
       background-position:center;
 
       main {
-        // color: $white;
-        background-color: rgba(255,255,255,0.6);
-        color: $dark_grey;
-        margin-top: 110px;
-        padding: 30px 30px;
+        color: $white;
+        height: calc(100% - 74px);
+        color: #FFFFFF;
+        margin: 74px 0;
+        padding: 0;
         position: relative;
+        display: grid;
+
+        .opaque_bg {
+          background-color: rgba(0, 0, 0, 0.6);
+          justify-self: center;
+          align-self: center;
+          padding: 30px 30px;
+        }
 
         // HEADINGS
         h1  { font-size: $heading1; }
@@ -47,6 +55,13 @@ html {
         h4  { font-size: $heading4; }
         h5  { font-size: $heading5; }
         p   { font-size: $normal_font_size }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        p { color: white; }
 
         @include respond-below(md) {
           // HEADINGS

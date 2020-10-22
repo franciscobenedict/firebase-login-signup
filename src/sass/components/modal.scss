@@ -17,27 +17,27 @@
       width: 100%;
 
       .modali-header {
-        background: rgba(255,255,255,0.4);
+        background: rgba(255,255,255,0.8);
         .modali-close-button {
           background: transparent;
         }
         .modali-title {
-          color: #fff;
+          color: $dark_grey;
           font-size: 2rem;
         }
       }
 
       .modali-body {
-        background: rgba(255,255,255,0.4);
+        background: rgba(255,255,255,0.8);
         border-radius: 0;
         border-top: 1px solid #CCC;
-        color: #fff;
+        color: $dark_grey;
         padding: 0 1.5rem .5rem 1.5rem;
         width: 100%;
         .modali-subheading {
-          color: #fff;
-           font-size: 1.4rem;
-           margin: 1rem 0;
+          color: $dark_grey;
+          font-size: 1.4rem;
+          margin: 1rem 0;
         }
         input {
           height: 40px;
