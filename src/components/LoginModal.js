@@ -170,11 +170,11 @@ const LoginModal = () => {
             placeholder="Email Address"
             autocomplete="off"
           />
-          <button disabled={isInvalid} type="submit">
+          <button disabled={isInvalid} type="submit" className="button submit_btn form_button" >
             Request Password change
           </button>
 
-          <Link to="" className="white_text" onClick={switchToLoginView}>Return to login modal</Link>
+          <div><Link to="" className="white_text" onClick={switchToLoginView}>Return to login modal</Link></div>
           {error && <p className="error">{error}</p>}
         </form>
       }

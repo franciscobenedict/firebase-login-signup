@@ -1,8 +1,8 @@
 import React                                            from 'react';
 import { BrowserRouter as Router, Switch, Route }       from 'react-router-dom';
 import { useUser }                                      from 'reactfire';
-import Navigation                                       from './components/Navigation';
-import Footer                                           from './components/Footer';
+// import Navigation                                       from './components/Navigation';
+// import Footer                                           from './components/Footer';
 import NotFound404                                      from './components/NotFound404';
 import EmailVerificationView                            from './components/EmailVerificationView';
 import EmailNotVerifiedView                             from './components/EmailNotVerifiedView';
@@ -18,8 +18,6 @@ function App() {
     <AuthProvider >
       <Router>
 
-        <Navigation />
-
         <Switch>
           <Route exact path="/" component={LandingView} />
           <Route exact path="/emailverification" component={EmailVerificationView} />
@@ -30,7 +28,6 @@ function App() {
           <Route path="*" component={NotFound404} />
         </Switch>
 
-        <Footer />
       </Router>
     </AuthProvider>
   );

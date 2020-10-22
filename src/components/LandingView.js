@@ -3,7 +3,7 @@ import React, {
   useEffect,
 } from 'react';
 import { useUser } from 'reactfire';
-import Navigation   from './Navigation';
+import Layout from './partials/Layout';
 
 const LandingView = () => {
   const currentUser = useUser();
@@ -16,9 +16,7 @@ const LandingView = () => {
   const [toggleTechUsed, setToggleTechUsed] = useState(false);
 
   return (
-    <>
-      <Navigation />
-      <main>
+    <Layout title={pageTitle} description="This is the Firebase authentication Login app">
         <h1>{pageTitle}</h1>
         <p>Login with Email or Google.</p>
         <p>{ currentUser ? <>You are logged in</> : <>You are not logged in.</> }</p>
@@ -39,8 +37,7 @@ const LandingView = () => {
             <li>html5</li>
           </ul>
         }
-      </main>
-    </>
+    </Layout>
   )
 }
 

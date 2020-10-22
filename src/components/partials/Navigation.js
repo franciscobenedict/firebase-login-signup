@@ -2,11 +2,11 @@ import React, {
 } from 'react';
 import { Link } from "react-router-dom";
 import { useUser } from 'reactfire';
-import SignupModal from './SignupModal';
-import LoginModal from './LoginModal';
-import Logout from './Logout';
+import SignupModal from '../SignupModal';
+import LoginModal from '../LoginModal';
+import Logout from '../Logout';
 import Modali, { useModali } from 'modali';
-import fbLogo from '../assets/fb-logo-white-header.svg';
+import fbLogo from '../../assets/fb-logo-white-header.svg';
 
 const Navigation = () => {
   const currentUser = useUser();
@@ -22,13 +22,13 @@ const Navigation = () => {
   return (
     <header className="header">
       <a className="fbLogo" href="http://www.franciscobenedict.com" rel="noopener noreferrer" target="_blank"><img src={fbLogo} alt="" /></a>
-      <a className="" href="http://www.react.franciscobenedict.com/" rel="noopener noreferrer">Home</a>
-      <a className="" href="https://github.com/franciscobenedict/firebase-login-signup" rel="noopener noreferrer" target="_blank">Github</a>
+      <a className="btn" href="http://www.react.franciscobenedict.com/" rel="noopener noreferrer">Home</a>
+      <a className="btn" href="https://github.com/franciscobenedict/firebase-login-signup" rel="noopener noreferrer" target="_blank">Github</a>
       {
         currentUser &&
         <>
-        <Link to="/">Landing page</Link>
-        <Link to="/logged-in-users">Logged In users</Link>
+        <Link className="btn" to="/">Landing page</Link>
+        <Link className="btn" to="/logged-in-users">Logged In users</Link>
         <Logout />
         </>
       }
@@ -36,8 +36,8 @@ const Navigation = () => {
       {
         !currentUser &&
         <>
-          <Link to="" onClick={toggleLoginModal}>Login</Link>
-          <Link to="" onClick={toggleSignupModal}>Sign up</Link>
+          <Link className="btn" to="" onClick={toggleLoginModal}>Login</Link>
+          <Link className="btn" to="" onClick={toggleSignupModal}>Sign up</Link>
 
           <Modali.Modal {...loginModal}>
             <LoginModal />

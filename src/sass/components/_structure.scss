@@ -12,41 +12,54 @@ html {
   }
 
   #root {
-    background-image: url('https://firebasestorage.googleapis.com/v0/b/fir-auth-fbsite.appspot.com/o/images%2Fcontent%2FlayoutImages%2Fdaniel-sessler-Vp5aee_Vh40-unsplash.jpg?alt=media&token=fa16dc4e-d189-4f3a-91e2-22c67304f057');
-    background-size: cover;
-    display: grid;
+    // background-image: url('https://firebasestorage.googleapis.com/v0/b/fir-auth-fbsite.appspot.com/o/images%2Fcontent%2FlayoutImages%2Fdaniel-sessler-Vp5aee_Vh40-unsplash.jpg?alt=media&token=fa16dc4e-d189-4f3a-91e2-22c67304f057');
+    // background-size: cover;
+    // display: grid;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
-    grid-template-rows: auto 1fr auto;
+    // grid-template-rows: auto 1fr auto;
 
     @import './header';
+    @import './footer';
 
-    main {
-      color: $white;
-      margin-top: 110px;
-      padding: 0 30px 30px;
-      position: relative;
+    .content {
+      flex: 1 0 auto;
 
-      // HEADINGS
-      h1  { font-size: $heading1; }
-      h2  { font-size: $heading2; }
-      h3  { font-size: $heading3; }
-      h4  { font-size: $heading4; }
-      h5  { font-size: $heading5; }
-      p   { font-size: $normal_font_size }
+      background-image: url('https://firebasestorage.googleapis.com/v0/b/fir-auth-fbsite.appspot.com/o/images%2Fcontent%2FlayoutImages%2Fdaniel-sessler-Vp5aee_Vh40-unsplash.jpg?alt=media&token=fa16dc4e-d189-4f3a-91e2-22c67304f057');
+      background-size: cover;
+      background-repeat:no-repeat;
+      background-attachment:fixed;
+      background-position:center;
 
-      @include respond-below(md) {
+      main {
+        // color: $white;
+        background-color: rgba(255,255,255,0.6);
+        color: $dark_grey;
+        margin-top: 110px;
+        padding: 30px 30px;
+        position: relative;
+
         // HEADINGS
-        h1  { font-size: $heading1_s; }
-        h2  { font-size: $heading2_s; }
-        h3  { font-size: $heading3_s; }
-        h4  { font-size: $heading4_s; }
-        h5  { font-size: $heading5_s; }
-        p   { font-size: $medium_font_size }
+        h1  { font-size: $heading1; }
+        h2  { font-size: $heading2; }
+        h3  { font-size: $heading3; }
+        h4  { font-size: $heading4; }
+        h5  { font-size: $heading5; }
+        p   { font-size: $normal_font_size }
 
-        padding-bottom: 0;
+        @include respond-below(md) {
+          // HEADINGS
+          h1  { font-size: $heading1_s; }
+          h2  { font-size: $heading2_s; }
+          h3  { font-size: $heading3_s; }
+          h4  { font-size: $heading4_s; }
+          h5  { font-size: $heading5_s; }
+          p   { font-size: $medium_font_size }
+
+          padding-bottom: 0;
+        }
       }
     }
-
-    @import './footer';
   }
 }
